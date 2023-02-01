@@ -1,0 +1,791 @@
+/* reset css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  /* tự tính toán các phần tử để thẻ không bị đẩy to ra */
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif; /* kiểu chữ không chân */
+    scroll-behavior: smooth; /* hành động hành vi khi cuộn trang */
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.grid .wide{
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 150px;
+}
+.col{
+    text-align: center;
+}
+.c-0{
+    display: none;
+}
+.c-1{
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+}
+.c-2{
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+}
+.c-3{
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.c-4{
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+.c-5{
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+}
+.c-6{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.c-7{
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+}
+.c-8{
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+}
+.c-9{
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+.c-10{
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+}
+.c-11{
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+}
+.c-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+
+
+
+
+
+header{
+    height: 80px;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+.logo{
+    text-align: left;
+    display: flex;
+}
+.logo img{
+    height: 74px;
+    width: auto;
+    margin: 3px 0;
+}
+.logo h2{
+    color: #FF6F00;
+    line-height: 80px;
+    margin-left: 30px;
+    font-size: px;
+}
+
+.logout{
+    text-align: right !important;
+    display: block;
+}
+.logout a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #FF6F00;
+    margin-top: 5px;
+    margin-right: 13px;
+}
+.logout img{
+    height: 20px;
+    width: auto;
+    margin-top: 5px;
+}
+.logout h2, .title h3{
+    color: #FF6F00;
+    margin-top: 8px;
+}
+.logout h2 img{
+    height: 20px;
+    width: auto;
+}
+
+
+.box{
+    margin-top: 80px;
+    display: flex;
+}
+.menubar{
+    width: 20%;
+    background-color: bisque;
+}
+.nav{
+    list-style-type: none;
+    padding-top: 40px;
+}
+.nav li{
+    cursor: pointer;
+    font-size: 22px;
+    margin: 30px 0 30px 20px;
+}
+.nav li img{
+    height: 24px;
+    width: auto;
+}
+#manager{
+    width: 80%;
+    min-height: 670px;
+    background-image: url('../image/backgroundadmin3.jpg');
+    background-size: cover;
+    object-fit: cover;
+}
+
+.manager-items{
+    width: 100%;
+    text-align: right;
+    padding-bottom: 30px;
+}
+.manager-items h1{
+    width: 100%;
+    text-align: center;
+    margin: 30px 0 0 0;
+}
+.manager-items button{
+    height: 34px;
+    padding: 0 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: 100px;
+    margin: 5px 120px 10px 0;
+    background-color: #009688;
+    color: white;
+}
+.manager-items button:hover{
+    cursor: pointer;
+    background-color: white;
+    border: solid 3px #009688;
+    color: #009688;
+}
+
+
+
+
+
+
+
+#title-items{
+    width: 80%;
+    margin:10px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 10px;
+}
+.stt-items{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    width: 40px;
+}
+.image-items{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    width: 150px;
+}
+.name-items{
+    width: 270px;
+    padding-right: 10px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+}
+.price-items{
+    width: 150px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+}
+.setting-items{
+    width: 70px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+}
+.remove-items{
+    width: 70px;
+    text-align: left;
+    padding-left: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+#main_items{
+    width: 80%;
+    height: 450px;
+    overflow: auto;
+    margin: 0 auto;
+    border: solid 0.5px #333;
+    overflow: auto;
+    border-radius: 7px;
+}
+.item{
+    display: flex;
+    margin: 3px 0;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+.stt-item{
+    width: 40px;
+    line-height: 80px;
+    text-align: left;
+    font-size: 24px;
+}
+.image-item{
+    width: 70px;
+    height: 80px;
+}
+.image-item img{
+    width: 70px;
+    height: 80px;
+    object-fit: cover;
+}
+.name-item{
+    overflow: hidden;
+    width: 250px;
+    line-height: 80px;
+    text-align: left;
+}
+.price-item{
+    width: 95px;
+    line-height: 80px;
+    text-align: center;
+    color: red;
+    font-weight: 200;
+}
+.setting-item{
+    width: 70px;
+    height: 80px;
+    text-align: right;
+}
+.setting-item img{
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+}
+
+.remove-item{
+    width: 70px;
+    height: 80px;
+    text-align: left;
+}
+.remove-item img{
+    width: 60px;
+    height: 60px;
+    margin: 10px auto;
+}
+
+
+
+
+
+/* css thêm sản phẩm */
+
+#container{
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+.box-products{
+    position: relative;
+    width: 60%;
+    height: 500px;
+    padding-top: 30px;
+    margin: 100px auto;
+    background-color: #009688;
+    display: flex;
+    display: none;
+}
+.box-products .ti-close{
+    position: absolute;
+    font-size: 24px;
+    right: 6px;
+    top: 6px;
+    font-weight: bold;
+    color: #333;
+}
+.box-products .ti-close:hover{
+    cursor: pointer;
+    color: red;
+}
+.box-products h2{
+    width: 100%;
+}
+.box-products form{
+    width: 100%;
+    display: flex;
+}
+.box-left{
+    width: 50%;
+}
+.box-right{
+    width: 50%;
+}
+.form-row{
+    width: 100%;
+    display: flex;
+    margin:30px 0;
+    padding: 0 30px;
+}
+.form-row label{
+    width: 150px;
+    line-height: 34px;
+}
+.form-row input{
+    height: 34px;
+    flex: 1;
+    padding: 0 20px;
+}
+.uploadfile{
+    background-color: white;
+    padding: 0 !important;
+    line-height: 34px;
+    cursor: pointer;
+}
+
+.form-row select{
+    height: 34px;
+    padding: 0 10px;
+    flex: 1;
+}
+::-webkit-file-upload-button {
+    background: rgb(231, 231, 231);
+    color: red;
+    padding: 0 35px;
+    height: 34px;
+    border: none;
+  }
+
+.box-right button{
+    position: relative;
+    height: 34px;
+    padding: 0 12px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* css quản lí user */
+#title-user{
+    width: 80%;
+    margin:10px auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 2px 0;
+}
+.stt-user{
+    font-weight: bold;
+    width: 7%;
+    text-align: center;
+}
+.user-avatar{
+    font-weight: bold;
+    width: 14%;
+    text-align: center;
+}
+.user-Name{
+    font-weight: bold;
+    width: 17%;
+    text-align: center;
+}
+.user-userName{
+    font-weight: bold;
+    width: 15%;
+    text-align: center;
+}
+.user-passWord{
+    font-weight: bold;
+    width: 14%;
+    text-align: center;
+}
+.user-permission{
+    font-weight: bold;
+    width: 15%;
+    text-align: center;
+}
+.decentralization{
+    font-weight: bold;
+    width: 15%;
+    text-align: center;
+}
+.remove-user{
+    font-weight: bold;
+    width: 13%;
+    text-align: center;
+}
+
+
+
+
+
+
+.user{
+    display: flex;
+    margin: 3px 0;
+}
+.sttUser{
+    width: 6%;
+    line-height: 80px;
+    text-align: center;
+    font-size: 24px;
+}
+.imageUser{
+    width: 13%;
+    height: 80px;
+    text-align: center;
+}
+.imageUser img{
+    width: 70px;
+    height: 80px;
+    object-fit: cover;
+}
+.nameUser{
+    line-height: 80px;
+    width: 16%;
+    text-align: center;
+}
+.userName{
+    width: 12%;
+    text-align: center;
+    line-height: 80px;
+}
+.userPassword{
+    width: 14%;
+    text-align: center;
+    line-height: 80px;
+}
+.userPermission{
+    width: 12%;
+    text-align: center;
+    line-height: 80px;
+}
+.settingUser{
+    width: 15%;
+    text-align: center;
+}
+.settingUser img{
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+}
+
+.removeUser{
+    width: 10%;
+    text-align: center;
+}
+.removeUser img{
+    width: 60px;
+    height: 60px;
+    margin: 10px auto;
+}
+
+
+
+
+
+/* css thêm sản phẩm */
+
+#update-item{
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.box-update{
+    position: relative;
+    width: 60%;
+    height: 500px;
+    padding-top: 30px;
+    margin: 100px auto;
+    background-color: #009688;
+    display: flex;
+}
+.box-update-user{
+    background-color: white !important;
+    width: 50%;
+    height: 450px;
+}
+.box-update .ti-close{
+    position: absolute;
+    font-size: 24px;
+    right: 6px;
+    top: 6px;
+    font-weight: bold;
+    color: #333;
+}
+.box-update .ti-close:hover{
+    cursor: pointer;
+    color: red;
+}
+.box-update h2{
+    width: 100%;
+}
+.box-update form{
+    width: 100%;
+    display: flex;
+}
+.box-left{
+    width: 50%;
+}
+.box-right{
+    width: 50%;
+}
+.form-row{
+    width: 100%;
+    display: flex;
+    margin:30px 0;
+    padding: 0 30px;
+}
+.form-row label{
+    width: 150px;
+    line-height: 34px;
+}
+.form-row input{
+    height: 34px;
+    flex: 1;
+    padding: 0 20px;
+}
+.uploadfile{
+    background-color: white;
+    padding: 0 !important;
+    line-height: 34px;
+    cursor: pointer;
+}
+
+.form-row select{
+    height: 34px;
+    padding: 0 10px;
+    flex: 1;
+}
+::-webkit-file-upload-button {
+    background: rgb(231, 231, 231);
+    color: red;
+    padding: 0 35px;
+    height: 34px;
+    border: none;
+  }
+
+.box-right button{
+    position: relative;
+    height: 34px;
+    padding: 0 12px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+
+
+
+
+
+/* css footer */
+footer{
+    width: 100%;
+    padding: 20px 20px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+footer .socials{
+    font-size: 24px;
+    
+}
+footer .socials a{
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+}
+footer .socials a:hover{
+    opacity: 0.5;
+}
+
+.copyright{
+    color: rgba(0, 0, 0, 0.7);
+    margin-top: 12px;
+}
+#footer .copyright a{
+    color: #009688;
+}
+
+
+
+
+
+
+/* quản lí user */
+.box-left-user{
+    width: 50%;
+}
+.box-user-avatar{
+    width: 100%;
+    text-align: center;
+}
+.box-user-avatar img{
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.box-user-avatar input{
+    border: solid 0.5px #fff;
+    border-radius: 5px;
+    outline: none; 
+}
+.box-user-avatar{
+    width: 100%;
+}
+.box-user-name{
+    margin-top: 15px;
+    width: 100%;
+}
+.box-user-name input{
+    width: 50%;
+    margin: 0 25%;
+    padding: 3px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border: solid 0.5px #fff;
+    border-radius: 5px;
+    outline: none;
+}
+.box-left-user input:hover{
+    border: solid 0.5px #333;
+}
+
+.box-user-email{
+    margin-top: 5px;
+    width: 100%;
+}
+.box-user-email input{
+    width: 50%;
+    margin: 0 25%;
+    padding: 3px 0;
+    text-align: center;
+    border: solid 0.5px #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 100;
+    outline: none;
+}
+.box-user-email input:hover{
+    border: solid 0.5px #333;
+}
+
+
+
+
+.box-right-user{
+    width: 50%;
+    padding-right: 100px;
+}
+.box-user-username{
+    margin-top: 50px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+}
+.box-user-password{
+    margin-top: 20px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+}
+.box-user-username label,
+.box-user-password label,
+.box-user-quyen label{
+    width: 100px;
+}
+.box-user-quyen{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+}
+.box-user-quyen input option{
+    padding: 3px 10px;
+}
+.box-user-username input,
+.box-user-password input,
+.box-user-quyen select{
+    flex: 1;
+    padding: 3px 10px;
+    border: solid 0.5px #333;
+    border-radius: 5px;
+    outline: none;
+}
+.btn-uploaduser{
+    padding-left: 30px;
+    text-align: center;
+    width: 100%;
+}
+.btn-uploaduser button{
+    height: 34px;
+    margin-top: 70px;
+    padding: 0 24px;
+    border-radius: 5px;
+    border: solid 2px #009688;
+    background-color: #009688;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-uploaduser button:hover{
+    background-color: #fff;
+    color: #009688;
+}
