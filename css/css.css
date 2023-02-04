@@ -789,6 +789,8 @@ footer h4{
     font-weight: bold;
     color: white;
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
 }
 .add-cart:hover{
     color: #10f0d9;
@@ -823,3 +825,168 @@ footer h4{
 
 }
 
+
+/* css trang Cart */
+.bg-box-cart{
+    width: 70%;
+    margin: 10px auto;
+    background-color: #eeeeee;
+    padding: 40px;
+    border-radius: 15px;
+}
+.box-cart{
+    width: 100%;
+    display: flex;
+}
+.cart{
+    width: 55%;
+    overflow: hidden;
+    background-color:#FEFEFE;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 12px 20px;
+}
+.cart-items{
+    width: 100%;
+}
+.item-of-cart{
+    display: flex;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #eeecec;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+.cart-items-img{
+    margin: 10px;
+    height: 60px;
+    width: 60px;
+}
+.cart-items-img img{
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.cart-items-name{
+    width: 60%;
+}
+.cart-items-name h3{
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    padding-bottom: 5px;
+}
+.cart-items-name p{
+    font-size: 16px;
+    color: #505050;
+}
+.cart-items-price{
+    width: 100px;
+}
+.cart-items-remove{
+    width: 50px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+
+.pay{
+    width: 45%;
+    background-color: #4a87ea;
+    padding: 25px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.card-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-details h2{
+    color: white;
+}
+
+.card-details-img{
+    width: 50px;
+    height: 50px;
+}
+.card-details-img img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.card-type{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.pay label{
+    color: #fff;
+}
+.card-type img{
+    margin-left: 20px;
+    height: 100px;
+    width: auto;
+}
+.pay>input{
+    width: 100%;
+    height: 34px;
+    margin-bottom: 20px;
+    padding-left: 24px;
+    border: solid 1px #4a87ea;
+    background-color: white;
+    border-radius: 5px;
+    color: #4a87ea;
+    outline: none;
+}
+.expiration-cvv{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.expiration-cvv input{
+    width: 40%;
+    height: 34px;
+    padding-left: 24px;
+    border: solid 1px #4a87ea;
+    background-color: white;
+    border-radius: 5px;
+    color: #4a87ea;
+    outline: none;
+}
+.pay hr{
+    border: none;
+    height: .5px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+.prepare-the-bill{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.prepare-the-bill h3{
+    font-size: 16px;
+    font-weight: 200;
+    color: white;
+}
+.pay button{
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+    background-color: #10bdac;
+    color: white;
+    border: 3px solid #10bdac;
+}
+.pay button:hover{
+    background-color: white;
+    color: #10bdac;
+}

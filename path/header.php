@@ -4,7 +4,10 @@
     include "database/database.php";
     $error = false;
     // xử lí khi đăng nhập
-    $_SESSION['stateUser'] ?: false;
+    $_SESSION['stateUser'];
+    if(!isset($_SESSION['stateUser'])){
+        $_SESSION['stateUser'] = false;
+    };
     if(isset($_POST['submitLogin']) && isset($_POST['submitLogin'])){
         $user = htmlspecialchars_decode($_POST['userLogin']);
         $password = htmlspecialchars_decode($_POST['passwordLogin']);
@@ -153,6 +156,10 @@
     <link rel="stylesheet" href="../css/css.css">
     <link rel="stylesheet" href="../css/themify-icons/themify-icons.css">
     <link rel="icon" href="../image/favicon.png">
+    
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>Bevis-store</title>
 </head>
 <body>
@@ -177,7 +184,9 @@
                             <input type="text" placeholder="Tìm Kiếm">
                         </div>
                     </i>
-                    <i class="ti-shopping-cart"></i>
+                    <a style="text-decoration: none;" href="index.php?act=cart">
+                        <i class="ti-shopping-cart"></i>
+                    </a>
                     <?php
                         if(!$_SESSION['stateUser']){
                             $_SESSION['name'] = "";

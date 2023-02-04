@@ -17,6 +17,9 @@
         case 'blog':
             include "components/blog.php";
             break;
+        case 'cart':
+            include "components/shoppingcart.php";
+            break;
     }
     include 'components/form-login.php';
     

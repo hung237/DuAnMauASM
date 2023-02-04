@@ -18,12 +18,20 @@
                     <h4>'.$item['price'].' vnđ</h4>
                     <p>'.$item['describtion'].'.</p>
                     <div class="box-add-cart">
-                        <a href="#" class="add-cart"><i class="ti-shopping-cart"></i></a>
+                        <button onclick="addCart('.$item['id'].')" class="add-cart"><i class="ti-shopping-cart"></i></button>
                     </div>
                 </div>
             ';
         }
     ?>   
+    <script>
+        function addCart(id){
+            alert(id);
+            $.post("components/shoppingcart.php?id="+id, function(data, status){
+            alert("Data: " + data + "\nStatus: " + status);
+            });
+        }
+    </script>
     
     
         
@@ -32,11 +40,6 @@
             if($current_page > 1){
                 echo '
                 <a class="pagination" href="index.php?act=menus&page='.($current_page-1).'"><</a>
-                ';
-            }
-            else {
-                echo '
-                <a class="pagination"><</a>
                 ';
             }
             for($i=1;$i<=$totalPage;$i++){
@@ -52,11 +55,6 @@
             if($current_page < $totalPage){
                 echo '
                 <a class="pagination" href="index.php?act=menus&page='.($current_page+1).'">></a>
-                ';
-            }
-            else {
-                echo '
-                <a class="pagination">></a>
                 ';
             }
         ?>
