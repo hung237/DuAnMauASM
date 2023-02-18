@@ -3,7 +3,7 @@
     $error = null;
     if(isset($_POST['submit'])){
         $user = htmlspecialchars_decode($_POST['user']);
-        include '../database.php';
+        include '../database/database.php';
 
         $check = searchUser($user);
         if($check == 0){

@@ -1,5 +1,5 @@
 <?php
-    include "database.php";
+    include "../database/database.php";
     $this_user = $_GET['this_user'];
     deleteUser($this_user);
     $url = $_GET['url'];

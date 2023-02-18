@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include '../database.php';
+    include '../database/database.php';
     if(isset($_POST['updateUser'])){
         $user = $_SESSION['this_user'];
         $newName = $_POST['newName'];

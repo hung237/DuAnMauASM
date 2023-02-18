@@ -22,7 +22,7 @@
                         <img src="../'.$item["image"].'">
                     </div>
                     <div class="name-item">'.$item["name"].'</div>
-                    <div class="price-item">'.$item["price"].'</div>
+                    <div class="price-item">$'.$item["price"].'.00</div>
                     <div class="setting-item"><a href="admin.php?act=items&event=update_item&this_id='.$item["id"].'&url='.$item["image"].'"><img src="../image/setting.png"></a></div>
                     <div class="remove-item"><a href="delete_item.php?this_id='.$item["id"].'&url='.$item["image"].'"><img src="../image/remove.png"></a></div>
                 </div>

@@ -2,6 +2,9 @@
     include "../database/database.php";
     session_start();
     error_reporting(4); //tắt thông báo lỗi(cảnh báo)
+    if(!isset($_SESSION['admin']) || $_SESSION['admin'] == false){
+        header('location: ../index.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

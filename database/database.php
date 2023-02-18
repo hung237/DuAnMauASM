@@ -17,8 +17,6 @@
         $stmt -> execute();
         $kq = $stmt -> fetchAll();
         if(count($kq)>0){
-
-            
             return $kq[0]['role'];
         }
         else return 2;
@@ -188,7 +186,7 @@
 
     function listItemsMenus($item_per_page,$offset){
         $conn = connectdb();
-        $sql = "SELECT * FROM products ORDER BY id ASC LIMIT $item_per_page OFFSET $offset";
+        $sql = "SELECT * FROM products  ORDER BY id ASC LIMIT $item_per_page OFFSET $offset";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $result = $stmt -> setFetchMode(PDO::FETCH_ASSOC);

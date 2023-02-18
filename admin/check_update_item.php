@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include 'database.php';
+    include '../database/database.php';
     if(isset($_POST['updateItem'])){
         $id =  $_SESSION['this_id'];
         $kind = $_POST['kind'];

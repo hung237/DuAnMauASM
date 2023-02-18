@@ -8,7 +8,7 @@
         $pass = htmlspecialchars_decode($_POST['password']);
         $question = $_POST['question'];
         $answer = htmlspecialchars_decode($_POST['answer']);
-        include '../database.php';
+        include '../database/database.php';
 
         $check = checkForget($user,$question,$answer);
         if($check == 0){

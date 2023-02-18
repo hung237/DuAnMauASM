@@ -75,7 +75,7 @@
                         <input onchange="chooseFile()" id="imageFile" name="avatar" type="file" accept="image/*" class="avatar">
 
                         <div class="box-avatar">
-                            <img id="newAvt" src="image/avatar/avatarRegister.jpg" alt="">
+                            <img id="newAvt" src="../image/avatar/avatarRegister.jpg" alt="">
                         </div>
                     </div>
 

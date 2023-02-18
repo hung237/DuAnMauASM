@@ -1,9 +1,10 @@
 <?php
-    // error_reporting(4) tắt thông báo lỗi(cảnh báo);
+    error_reporting(4); //tắt thông báo lỗi(cảnh báo);
     session_start();
-    include "database/database.php";
+    include_once "database/database.php";
     $error = false;
     // xử lí khi đăng nhập
+    $_SESSION['admin'] = false;
     $_SESSION['stateUser'];
     if(!isset($_SESSION['stateUser'])){
         $_SESSION['stateUser'] = false;
@@ -14,6 +15,7 @@
         $role = checkUser($user,$password);
 
         if($role == 1){
+            $_SESSION['admin'] = true;
             header('location: admin/admin.php');
         }
         if($role == 0){
@@ -184,8 +186,22 @@
                             <input type="text" placeholder="Tìm Kiếm">
                         </div>
                     </i>
-                    <a style="text-decoration: none;" href="index.php?act=cart">
+                    <a class="header-cart" style="text-decoration: none;" href="index.php?act=cart">
                         <i class="ti-shopping-cart"></i>
+                        <div class="number-cart" id="qty">
+                            <?php
+                                if(!isset($_SESSION["cart"])){
+                                    echo "0";
+                                }
+                                else{
+                                    $qty = count($_SESSION['cart']);
+                                    echo $qty;
+                                }
+                                if(isset($_POST["id"]) && isset($_POST["id"])){
+                                    echo count($_SESSION["cart"]);
+                                }
+                            ?>
+                        </div>
                     </a>
                     <?php
                         if(!$_SESSION['stateUser']){

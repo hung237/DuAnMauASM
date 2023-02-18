@@ -9,7 +9,7 @@
 
         // lấy tên file imgae
         $image =  basename($_FILES['image']['name']);
-        include 'database.php';
+        include '../database/database.php';
 
         
         if(!empty(trim($kind)) && !empty(trim($name)) && !empty(trim($describtion)) && !empty(trim($price)) && !empty(trim($image))){

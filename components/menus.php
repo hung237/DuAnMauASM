@@ -15,10 +15,10 @@
                         <img src="'.$item['image'].'" alt="">
                     </div>
                     <h3>'.$item['name'].'</h3>
-                    <h4>'.$item['price'].' vnđ</h4>
+                    <h4>$'.$item['price'].'.00</h4>
                     <p>'.$item['describtion'].'.</p>
                     <div class="box-add-cart">
-                        <button onclick="addCart('.$item['id'].')" class="add-cart"><i class="ti-shopping-cart"></i></button>
+                        <button  name="id" onclick="addCart('.$item['id'].')" class="add-cart"><i class="ti-shopping-cart"></i></button>
                     </div>
                 </div>
             ';
@@ -26,9 +26,9 @@
     ?>   
     <script>
         function addCart(id){
-            alert(id);
-            $.post("components/shoppingcart.php?id="+id, function(data, status){
-            alert("Data: " + data + "\nStatus: " + status);
+            alert("Đã thêm sản phẩm vào giỏ hàng");
+            $.post("components/addtocart.php",{'id':id}, function(data, status){
+                $("#qty").text(data);
             });
         }
     </script>

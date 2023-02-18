@@ -6,7 +6,6 @@
     include 'path/main.php';
 ?>   
 
-    
 <?php
     include 'path/footer.php';
 ?>

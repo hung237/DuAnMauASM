@@ -46,10 +46,10 @@ function chooseFile(){
 
 }
 
-window.addEventListener("scroll", function(){
-    var header = document.getElementById('header');
-    header.style.backgroundColor = "red";
-    if(window.scrollY == 0){
-        header.style.backgroundColor = "black";
-    }
-})
+// window.addEventListener("scroll", function(){
+//     var header = document.getElementById('header');
+//     header.style.backgroundColor = "red";
+//     if(window.scrollY == 0){
+//         header.style.backgroundColor = "black";
+//     }
+// })
